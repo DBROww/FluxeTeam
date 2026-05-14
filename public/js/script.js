@@ -3,7 +3,7 @@ window.addEventListener('load', () => {
     const screen = document.getElementById('loading-screen');
     screen.classList.add('hidden');
     setTimeout(() => screen.remove(), 500);
-  }, 2000);
+  }, 1500);
 });
 
 const revelar = ScrollReveal({
@@ -75,3 +75,23 @@ revelar.reveal('.quadro3', {
 revelar.reveal('.quadro4', {
     delay: 1000
 })
+
+/* ========================= */
+/* LOADING SCREEN */
+/* ========================= */
+
+document.body.classList.add("loading");
+
+window.addEventListener("load", () => {
+
+    const loadingScreen = document.getElementById("loading-screen");
+
+    setTimeout(() => {
+
+        loadingScreen.classList.add("fade-out");
+
+        document.body.classList.remove("loading");
+
+    }, 1200);
+
+});
